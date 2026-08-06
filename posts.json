@@ -1,0 +1,14 @@
+[
+  {
+    "titulo": "Post de prueba",
+    "fecha": "2026-08-06",
+    "archivo": "posts/post_prueba.html",
+    "imagen": "https://drive.google.com/imagen.jpg"
+  },
+  {
+    "titulo": "Segundo post",
+    "fecha": "2026-08-07",
+    "archivo": "posts/post2.html",
+    "imagen": "https://dropbox.com/otraimagen.png"
+  }
+]
