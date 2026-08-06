@@ -7338,6 +7338,24 @@ style="position: absolute;  top: 15px; right: 15px; background: rgba(0, 0, 0, 0.
 </button>
 </div>     
 
+
+<div style="margin: 40px auto; max-width: 600px; padding: 20px; font-family: sans-serif;">
+    <h3 style="color: #8b7355; border-bottom: 2px solid #eee; padding-bottom: 10px;">Lecturas Alternativas Recomendadas</h3>
+    <ul style="list-style: none; padding: 0;">
+        {% for post in site.posts %}
+            <li style="margin-bottom: 15px; padding: 10px; background: #fafafa; border-left: 4px solid #8b7355;">
+                <span style="font-size: 0.8rem; color: #999; text-transform: uppercase; font-weight: bold;">{{ post.category }}</span><br>
+                <a href="{{ post.url }}" style="color: #222; text-decoration: none; font-weight: bold; font-size: 1.1rem;">{{ post.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+
+
+
+
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     
