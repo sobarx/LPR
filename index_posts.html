@@ -1,1 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bitácora Pública - Publicaciones</title>
+<style>
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    margin: 20px; 
+    background-color: #f5eada; 
+    color: #56561F; 
+    letter-spacing: 0.03em; 
+}
+
+.encabezado {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+h1 { color: #797921; margin-bottom: 5px; }
+
+/* Tarjetas para los posts */
+.tarjeta-post { 
+    background-color: #f5eada; 
+    max-width: 800px; 
+    padding: 20px; 
+    border-radius: 15px; 
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.2); 
+    margin: 0 auto 25px auto; 
+    width: 92%; 
+    border-top: 6px solid #797921; 
+    box-sizing: border-box;
+}
+
+.tarjeta-post h2 { 
+    color: #797921; 
+    margin-top: 0; 
+}
+
+.fecha { 
+    font-size: 0.85em; 
+    color: #797921; 
+    font-weight: bold; 
+}
+
+.btn-leer { 
+    display: inline-block; 
+    margin-top: 10px; 
+    padding: 8px 16px; 
+    background-color: #797921; 
+    color: #f5eada; 
+    text-decoration: none; 
+    border-radius: 6px; 
+    font-weight: bold; 
+}
+
+.btn-leer:hover { 
+    background-color: #56561F; 
+}
+</style>
+</head>
+<body>
+
+<div class="encabezado">
+    <h1>Bitácora Pública</h1>
+    <p>Noticias - Actualidad - Opinión</p>
+</div>
+
+<!-- Contenedor donde se cargarán las publicaciones automáticas -->
+<div id="contenedor-publicaciones"></div>
+
+<script>
+// Carga automática desde publicaciones.json
+fetch('publicaciones.json')
+  .then(response => response.json())
+  .then(posts => {
+    const contenedor = document.getElementById('contenedor-publicaciones');
+    
+    posts.forEach(post => {
+      const tarjeta = document.createElement('div');
+      tarjeta.className = 'tarjeta-post';
+      
+      tarjeta.innerHTML = `
+        <h2>${post.titulo}</h2>
+        <span class="fecha">📅 ${post.fecha}</span>
+        <p>${post.resumen}</p>
+        <a class="btn-leer" href="${post.archivo}">Leer publicación completa →</a>
+      `;
+      
+      contenedor.appendChild(tarjeta);
+    });
+  })
+  .catch(error => console.error('Error al cargar publicaciones:', error));
+</script>
+
+</body>
+</html>
 
