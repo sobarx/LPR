@@ -83,7 +83,7 @@ h1 { color: #797921; margin-bottom: 5px; }
 
 <script>
 // Carga automática desde publicaciones.json usando ruta relativa explícita
-fetch('./publicaciones.json')
+fetch('./post.json')
   .then(response => {
     if (!response.ok) {
       throw new Error('No se pudo encontrar el archivo publicaciones.json (Código: ' + response.status + ')');
