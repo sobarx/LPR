@@ -59,6 +59,16 @@ h1 { color: #797921; margin-bottom: 5px; }
 .btn-leer:hover { 
     background-color: #56561F; 
 }
+
+.mensaje-error {
+    text-align: center;
+    color: #a94442;
+    background-color: #f2dede;
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 20px auto;
+}
 </style>
 </head>
 <body>
@@ -72,12 +82,22 @@ h1 { color: #797921; margin-bottom: 5px; }
 <div id="contenedor-publicaciones"></div>
 
 <script>
-// Carga automática desde publicaciones.json
-fetch('publicaciones.json')
-  .then(response => response.json())
+// Carga automática desde publicaciones.json usando ruta relativa explícita
+fetch('./publicaciones.json')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('No se pudo encontrar el archivo publicaciones.json (Código: ' + response.status + ')');
+    }
+    return response.json();
+  })
   .then(posts => {
     const contenedor = document.getElementById('contenedor-publicaciones');
     
+    if (!posts || posts.length === 0) {
+      contenedor.innerHTML = '<p style="text-align:center;">No hay publicaciones disponibles.</p>';
+      return;
+    }
+
     posts.forEach(post => {
       const tarjeta = document.createElement('div');
       tarjeta.className = 'tarjeta-post';
@@ -92,9 +112,12 @@ fetch('publicaciones.json')
       contenedor.appendChild(tarjeta);
     });
   })
-  .catch(error => console.error('Error al cargar publicaciones:', error));
+  .catch(error => {
+    console.error('Error al cargar publicaciones:', error);
+    document.getElementById('contenedor-publicaciones').innerHTML = 
+      `<div class="mensaje-error"><strong>Atención:</strong> ${error.message}</div>`;
+  });
 </script>
 
 </body>
 </html>
-
