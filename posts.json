@@ -1,14 +1,9 @@
 [
   {
-    "titulo": "Post de prueba",
+    "id": 1,
+    "titulo": "Mi primer post",
     "fecha": "2026-08-06",
-    "archivo": "posts/post_prueba.html",
-    "imagen": "https://drive.google.com/imagen.jpg"
-  },
-  {
-    "titulo": "Segundo post",
-    "fecha": "2026-08-07",
-    "archivo": "posts/post2.html",
-    "imagen": "https://dropbox.com/otraimagen.png"
+    "resumen": "Estoy ansioso de publicar mi primer post por GitHub, está quedando padre.",
+    "archivo": "posts/post1.html"
   }
 ]
