@@ -10,6 +10,15 @@
     "id": 2,
     "titulo": "Enfoque 360",
     "fecha": "2026-08-08",
+    <div class="tarjeta-post">
+    <h2>Enfoque 360</h2>
+    <p>📅 2026-08-08</p>
+    <img src="../imagenes/2-enfoque-360-img.jpg" alt="Enfoque 360" style="width: 100%; height: auto; border-radius: 8px; margin: 10px 0;">
+
+    <p>Un breve resumen de la percepción geopolítica.</p>
+    <a href="ruta-de-tu-post.html" class="boton-leer">Leer publicación completa →</a>
+</div>
+    
     "resumen": "Un breve resumen de la percepción geopolítica.",
     "archivo": "posts/2-enfoque-360.html"
   }
