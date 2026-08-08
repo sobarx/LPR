@@ -21,7 +21,7 @@ body {
 
 h1 { color: #797921; margin-bottom: 5px; }
 
-/* Tarjetas para los posts */
+
 .tarjeta-post { 
     background-color: #f5eada; 
     max-width: 800px; 
@@ -39,7 +39,7 @@ h1 { color: #797921; margin-bottom: 5px; }
     margin-top: 0; 
 }
 
-/* Estilo para la miniatura agregada */
+
 .img-miniatura {
     width: 100%;
     height: auto;
@@ -87,11 +87,11 @@ h1 { color: #797921; margin-bottom: 5px; }
     <p>Noticias - Actualidad - Opinión</p>
 </div>
 
-<!-- Contenedor donde se cargarán las publicaciones automáticas -->
+
 <div id="contenedor-publicaciones"></div>
 
 <script>
-// Carga automática desde posts.json
+
 fetch('./posts.json')
   .then(response => {
     if (!response.ok) {
@@ -111,7 +111,7 @@ fetch('./posts.json')
       const tarjeta = document.createElement('div');
       tarjeta.className = 'tarjeta-post';
       
-      // Valida si la entrada tiene imagen en el JSON
+      
       const miniaturaHtml = post.imagen 
         ? `<img src="${post.imagen}" alt="${post.titulo}" class="img-miniatura">` 
         : '';
