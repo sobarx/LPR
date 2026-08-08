@@ -39,6 +39,15 @@ h1 { color: #797921; margin-bottom: 5px; }
     margin-top: 0; 
 }
 
+/* Estilo para la miniatura agregada */
+.img-miniatura {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 12px 0 5px 0;
+    display: block;
+}
+
 .fecha { 
     font-size: 0.85em; 
     color: #797921; 
@@ -102,9 +111,15 @@ fetch('./posts.json')
       const tarjeta = document.createElement('div');
       tarjeta.className = 'tarjeta-post';
       
+      // Valida si la entrada tiene imagen en el JSON
+      const miniaturaHtml = post.imagen 
+        ? `<img src="${post.imagen}" alt="${post.titulo}" class="img-miniatura">` 
+        : '';
+
       tarjeta.innerHTML = `
         <h2>${post.titulo}</h2>
         <span class="fecha">📅 ${post.fecha}</span>
+        ${miniaturaHtml}
         <p>${post.resumen}</p>
         <a class="btn-leer" href="${post.archivo}">Leer publicación completa →</a>
       `;
