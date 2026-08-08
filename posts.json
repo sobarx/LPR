@@ -1,16 +1,19 @@
+
 [
   {
     "id": 1,
     "titulo": "Mi primer post",
     "fecha": "2026-08-07",
     "resumen": "Titulares de noticias en mi primer post en githob.",
+    "imagen": "",
     "archivo": "posts/post1.html"
   },
   {
     "id": 2,
     "titulo": "Enfoque 360",
-    "fecha": "2026-08-08",    
+    "fecha": "2026-08-08",
     "resumen": "Un breve resumen de la percepción geopolítica.",
+    "imagen": "imagenes/2-enfoque-360-img.jpg",
     "archivo": "posts/2-enfoque-360.html"
   }
 ]
