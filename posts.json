@@ -4,7 +4,7 @@
     "titulo": "Mi primer post",
     "fecha": "2026-08-07",
     "resumen": "Titulares de noticias en mi primer post en githob.",
-    "imagen": "",
+    "imagen": "imagenes/blogger.jpg",
     "archivo": "posts/post1.html"
   },
   {
