@@ -7,3 +7,13 @@
     "archivo": "posts/post1.html"
   }
 ]
+
+[
+  {
+    "id": 1,
+    "titulo": "Enfoque 360",
+    "fecha": "2026-08-08",
+    "resumen": "Un breve resumen de la percepción geopolítica.",
+    "archivo": "2-enfoque-360.html"
+  }
+]
