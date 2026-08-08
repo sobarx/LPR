@@ -107,7 +107,7 @@ fetch('./posts.json')
       return;
     }
 
-    posts.forEach(post => {
+    posts.slice().reverse().forEach(post => {
       const tarjeta = document.createElement('div');
       tarjeta.className = 'tarjeta-post';
       
