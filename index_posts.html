@@ -21,15 +21,19 @@ body {
 
 h1 { color: #797921; margin-bottom: 5px; }
 
+/* Contenedores generales */
+.seccion-bloque {
+    max-width: 800px;
+    margin: 0 auto 25px auto;
+    width: 92%;
+}
 
+/* 1. Post más reciente */
 .tarjeta-post { 
     background-color: #f5eada; 
-    max-width: 800px; 
     padding: 20px; 
     border-radius: 15px; 
     box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.2); 
-    margin: 0 auto 25px auto; 
-    width: 92%; 
     border-top: 6px solid #797921; 
     box-sizing: border-box;
 }
@@ -38,7 +42,6 @@ h1 { color: #797921; margin-bottom: 5px; }
     color: #797921; 
     margin-top: 0; 
 }
-
 
 .img-miniatura {
     width: 100%;
@@ -69,6 +72,53 @@ h1 { color: #797921; margin-bottom: 5px; }
     background-color: #56561F; 
 }
 
+/* 2. Lista de enlaces (Top 10 siguientes) */
+.lista-titulos {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.lista-titulos li {
+    padding: 10px 14px;
+    border-bottom: 1px dashed #797921;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lista-titulos a {
+    color: #797921;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.lista-titulos a:hover {
+    color: #56561F;
+    text-decoration: underline;
+}
+
+/* 3. Acordeón para el resto de post */
+details {
+    background-color: rgba(121, 121, 33, 0.08);
+    border-radius: 10px;
+    padding: 12px 18px;
+    border: 1px solid #797921;
+}
+
+summary {
+    font-weight: bold;
+    color: #797921;
+    cursor: pointer;
+    font-size: 1.05em;
+    outline: none;
+}
+
+summary:hover {
+    color: #56561F;
+}
+
 .mensaje-error {
     text-align: center;
     color: #a94442;
@@ -87,11 +137,9 @@ h1 { color: #797921; margin-bottom: 5px; }
     <p>Noticias - Actualidad - Opinión</p>
 </div>
 
-
 <div id="contenedor-publicaciones"></div>
 
 <script>
-
 fetch('./posts.json')
   .then(response => {
     if (!response.ok) {
@@ -107,25 +155,65 @@ fetch('./posts.json')
       return;
     }
 
-    posts.slice().reverse().forEach(post => {
-      const tarjeta = document.createElement('div');
-      tarjeta.className = 'tarjeta-post';
-      
-      
-      const miniaturaHtml = post.imagen 
-        ? `<img src="${post.imagen}" alt="${post.titulo}" class="img-miniatura">` 
-        : '';
+    // Invertimos el arreglo para tener los más recientes primero
+    const postsOrdenados = posts.slice().reverse();
 
-      tarjeta.innerHTML = `
-        <h2>${post.titulo}</h2>
-        <span class="fecha">📅 ${post.fecha}</span>
+    // 1. Post más reciente
+    const reciente = postsOrdenados[0];
+    const miniaturaHtml = reciente.imagen 
+      ? `<img src="${reciente.imagen}" alt="${reciente.titulo}" class="img-miniatura">` 
+      : '';
+
+    let htmlContenido = `
+      <div class="seccion-bloque tarjeta-post">
+        <h2>${reciente.titulo}</h2>
+        <span class="fecha">📅 ${reciente.fecha}</span>
         ${miniaturaHtml}
-        <p>${post.resumen}</p>
-        <a class="btn-leer" href="${post.archivo}">Leer publicación completa →</a>
+        <p>${reciente.resumen}</p>
+        <a class="btn-leer" href="${reciente.archivo}">Leer publicación completa →</a>
+      </div>
+    `;
+
+    // 2. Los siguientes 10 posts (del índice 1 al 10)
+    const siguientesDiez = postsOrdenados.slice(1, 11);
+    if (siguientesDiez.length > 0) {
+      htmlContenido += `<div class="seccion-bloque"><ul class="lista-titulos">`;
+      siguientesDiez.forEach(post => {
+        htmlContenido += `
+          <li>
+            <a href="${post.archivo}">${post.titulo}</a>
+            <span class="fecha">${post.fecha}</span>
+          </li>
+        `;
+      });
+      htmlContenido += `</ul></div>`;
+    }
+
+    // 3. El resto de posts (del índice 11 en adelante) dentro del acordeón
+    const restoPosts = postsOrdenados.slice(11);
+    if (restoPosts.length > 0) {
+      htmlContenido += `
+        <div class="seccion-bloque">
+          <details>
+            <summary>📦 Ver publicaciones anteriores (${restoPosts.length})</summary>
+            <ul class="lista-titulos">
       `;
-      
-      contenedor.appendChild(tarjeta);
-    });
+      restoPosts.forEach(post => {
+        htmlContenido += `
+          <li>
+            <a href="${post.archivo}">${post.titulo}</a>
+            <span class="fecha">${post.fecha}</span>
+          </li>
+        `;
+      });
+      htmlContenido += `
+            </ul>
+          </details>
+        </div>
+      `;
+    }
+
+    contenedor.innerHTML = htmlContenido;
   })
   .catch(error => {
     console.error('Error al cargar publicaciones:', error);
