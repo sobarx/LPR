@@ -14,5 +14,13 @@
     "resumen": "Un breve resumen de la percepción geopolítica.",
     "imagen": "imagenes/2-enfoque-360-img.jpg",
     "archivo": "posts/2-enfoque-360.html"
+  },
+  {
+    "id": 2,
+    "titulo": "Noción para crear blog en Githob",
+    "fecha": "2026-08-09",
+    "resumen": "Con este post podrás tener los conocimientos básicos para comenzar a construir tu propio blog.",
+    "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/nocion-para-crear-blog-githob-img.jpg",
+    "archivo": "nocion-para-crear-blog-githob.html"
   }
 ]
