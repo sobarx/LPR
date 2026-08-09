@@ -27,7 +27,7 @@
     "id": 4,
     "titulo": "Este es un blog de prueba",
     "fecha": "2026-08-10",
-    "resumen": "Con este post podrás tener los conocimientos básicos para comenzar a construir tu propio blog.",
+    "resumen": "Una prueba real del funcionamiento de un blog dentro de la plataforma Github",
     "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/4-este-un-blog-prueba-img.jpg",
     "archivo": "posts/este-un-blog-prueba.html"
   }
