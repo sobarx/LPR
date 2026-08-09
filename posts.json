@@ -16,7 +16,7 @@
     "archivo": "posts/2-enfoque-360.html"
   },
   {
-    "id": 2,
+    "id": 3,
     "titulo": "Noción para crear blog en Githob",
     "fecha": "2026-08-09",
     "resumen": "Con este post podrás tener los conocimientos básicos para comenzar a construir tu propio blog.",
@@ -24,9 +24,9 @@
     "archivo": "posts/este-un-blog-prueba.html"
   },
   {
-    "id": 2,
+    "id": 4,
     "titulo": "Este es un blog de prueba",
-    "fecha": "2026-08-09",
+    "fecha": "2026-08-10",
     "resumen": "Con este post podrás tener los conocimientos básicos para comenzar a construir tu propio blog.",
     "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/4-este-un-blog-prueba-img.jpg",
     "archivo": "posts/nocion-para-crear-blog-githob.html"
