@@ -30,8 +30,7 @@
     "resumen": "Una prueba real del funcionamiento de un blog dentro de la plataforma Github",
     "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/4-este-un-blog-prueba-img.jpg",
     "archivo": "posts/este-un-blog-prueba.html"
-  }
-  ,
+  },
 {
     "id": 5,
     "titulo": "Capitaloceno",
