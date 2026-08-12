@@ -38,5 +38,17 @@
     "resumen": "Descomposición Social",
     "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/6-capitaloceno-img.jpg",
     "archivo": "posts/capitaloceno.html"
+},
+  
+{
+    "id": 6,
+    "titulo": "7Protestas",
+    "fecha": "2026-08-12",
+    "resumen": "Objetivo real de las protesta en tiempo electoral",
+    "imagen": "X",
+    "archivo": "posts/7protesta.html"
 }
 ]
+
+
+
