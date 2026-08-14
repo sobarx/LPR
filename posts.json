@@ -54,7 +54,7 @@
     "titulo": "La Revista ",
     "fecha": "2026-08-14",
     "resumen": "Dulce, ensayo, noticias y algo más",
-    "imagen": "X",
+    "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/8_1arrozconleche.jpg",
     "archivo": "posts/8_p_la_revista.html"
 }
 ]
