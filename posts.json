@@ -47,6 +47,15 @@
     "resumen": "Objetivo real de las protesta en tiempo electoral",
     "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/7Vitruvio%20P%C3%A9rez_img.jpg",
     "archivo": "posts/7protesta.html"
+},
+  
+{
+    "id": 7,
+    "titulo": "La Revista ",
+    "fecha": "2026-08-14",
+    "resumen": "Dulce, ensayo, noticias y algo más",
+    "imagen": "X",
+    "archivo": "posts/8_p_la_revista.html"
 }
 ]
 
