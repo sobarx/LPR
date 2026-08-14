@@ -56,7 +56,16 @@
     "resumen": "Dulce, ensayo, noticias y algo más",
     "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/8_1arrozconleche.jpg",
     "archivo": "posts/8_p_la_revista.html"
-}
+}  ,
+  
+{
+    "id": 8,
+    "titulo": "Realidad de la ciencia ficción",
+    "fecha": "2026-08-15",
+    "resumen": "Supresor de drones",
+    "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/9realidad_de_la_ciencia_ficci%C3%B3n_img.png",
+    "archivo": "posts/9realidad_de_la_ciencia_ficción.html"
+  }
 ]
 
 
