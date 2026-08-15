@@ -2,16 +2,38 @@ name: Reporte de Trafico LPR
 on:
   push:
     branches: [ main ]
+  schedule:
+    - cron: '0 12 * * *' # Opcional: Reporte automático todos los días a las 12:00 UTC
 
 jobs:
   reportar:
     runs-on: ubuntu-latest
     steps:
       - name: Consultar trafico y enviar a Telegram
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Se incluye automáticamente, no debes crearlo
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          TRAFFIC=$(curl -s https://github.com)
-          VIEWS=$(echo "$TRAFFIC" | grep -o '"count":[0-9]*' | head -1 | cut -d':' -f2 || echo "0")
-          UN_VIEWS=$(echo "$TRAFFIC" | grep -o '"uniques":[0-9]*' | head -1 | cut -d':' -f2 || echo "0")
-          MESSAGE="📊 *REPORTE DE TRÁFICO: sobarx/LPR* %0A%0A🌐 *Visitas a la Web:*%0A• Totales: $VIEWS %0A• Usuarios únicos: $UN_VIEWS"
-          curl -s -X POST https://telegram.org{{ secrets.TELEGRAM_TOKEN }}/sendMessage -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} -d text="$MESSAGE" -d parse_mode="Markdown"
+          # 1. Consultar la API oficial de GitHub Traffic
+          TRAFFIC=$(curl -s -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            https://github.com)
           
+          # 2. Extraer datos del JSON usando jq (instalado por defecto en ubuntu-latest)
+          VIEWS=$(echo "$TRAFFIC" | jq '.count // 0')
+          UN_VIEWS=$(echo "$TRAFFIC" | jq '.uniques // 0')
+          
+          # 3. Preparar mensaje con saltos de línea reales
+          MESSAGE="📊 *REPORTE DE TRÁFICO: sobarx/LPR*
+
+🌐 *Visitas (Últimos 14 días):*
+• Totales: $VIEWS
+• Usuarios únicos: $UN_VIEWS"
+          
+          # 4. Enviar a Telegram usando variables de entorno seguras
+          curl -s -X POST "https://telegram.org{TELEGRAM_TOKEN}/sendMessage" \
+            -d "chat_id=${TELEGRAM_CHAT_ID}" \
+            -d "text=${MESSAGE}" \
+            -d "parse_mode=Markdown"
+            
