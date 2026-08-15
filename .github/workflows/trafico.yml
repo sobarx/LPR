@@ -23,12 +23,11 @@ jobs:
           VIEWS=$(echo "$TRAFFIC" | jq '.count // 0')
           UN_VIEWS=$(echo "$TRAFFIC" | jq '.uniques // 0')
           
-          # 3. Mensaje en una sola línea usando \n para evitar que el editor se ponga rojo
+          # 3. Mensaje formateado en una sola línea para evitar alertas rojas del editor
           MESSAGE="📊 *REPORTE DE TRÁFICO: sobarx/LPR*\n\n🌐 *Visitas (Últimos 14 días):*\n• Totales: $VIEWS\n• Usuarios únicos: $UN_VIEWS"
           
-          # 4. Enviar a la API correcta de Telegram usando la palabra 'bot' requerida
+          # 4. Enviar a la API correcta de Telegram usando variables de entorno
           curl -s -X POST "https://telegram.org{TELEGRAM_TOKEN}/sendMessage" \
             -d "chat_id=${TELEGRAM_CHAT_ID}" \
             -d "text=$(echo -e $MESSAGE)" \
             -d "parse_mode=Markdown"
-            
