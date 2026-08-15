@@ -1,1 +1,17 @@
+name: Reporte de Trafico LPR
+on:
+  push:
+    branches: [ main ]
 
+jobs:
+  reportar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Consultar trafico y enviar a Telegram
+        run: |
+          TRAFFIC=$(curl -s https://github.com)
+          VIEWS=$(echo "$TRAFFIC" | grep -o '"count":[0-9]*' | head -1 | cut -d':' -f2 || echo "0")
+          UN_VIEWS=$(echo "$TRAFFIC" | grep -o '"uniques":[0-9]*' | head -1 | cut -d':' -f2 || echo "0")
+          MESSAGE="📊 *REPORTE DE TRÁFICO: sobarx/LPR* %0A%0A🌐 *Visitas a la Web:*%0A• Totales: $VIEWS %0A• Usuarios únicos: $UN_VIEWS"
+          curl -s -X POST https://telegram.org{{ secrets.TELEGRAM_TOKEN }}/sendMessage -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} -d text="$MESSAGE" -d parse_mode="Markdown"
+          
