@@ -56,7 +56,7 @@
     "resumen": "Dulce, ensayo, noticias y algo más",
     "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/8_1arrozconleche.jpg",
     "archivo": "posts/8_p_la_revista.html"
-}  ,
+},
   
 {
     "id": 8,
@@ -65,7 +65,16 @@
     "resumen": "Supresor de drones",
     "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/9realidad_de_la_ciencia_ficci%C3%B3n_img.png",
     "archivo": "posts/9realidad_de_la_ciencia_ficción.html"
-  }
+  },
+  
+{
+    "id": 9,
+    "titulo": "Que Ternura",
+    "fecha": "2026-08-17",
+    "resumen": "Quinta Economía, Quinta Columna, Paralelismo y Web Oscura",
+    "imagen": "10b_que_ternura_img.jpg",
+    "archivo": "posts/10que_ternura.html"
+}
 ]
 
 
