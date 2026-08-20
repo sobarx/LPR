@@ -83,6 +83,15 @@
     "resumen": "Aplicaciones son las que dan vida al internet",
     "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/11app_img.jpg",
     "archivo": "posts/11app.html"
+},
+  
+{
+    "id": X,
+    "titulo": "X",
+    "fecha": "X",
+    "resumen": "X",
+    "imagen": "X",
+    "archivo": "posts/X"
 }
 ]
 
