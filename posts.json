@@ -92,6 +92,16 @@
     "resumen": "Beneficios de la globalización Vs lo contraproducente de la dependencia",
     "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/12_globalizaci%C3%B3n_Vs_dependencia_img.jpg",
     "archivo": "posts/12_globalización_Vs_dependencia.html"
+},
+
+  
+{
+    "id": 13,
+    "titulo": "Distopia Real",
+    "fecha": "2026-08-21",
+    "resumen": "Cuando la realidad rebaza la imaginación para convertirse en una distopia real.",
+    "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/13_distopia_real_img.jpg",
+    "archivo": "posts/13_distopia_real.html"
 }
 ]
 
