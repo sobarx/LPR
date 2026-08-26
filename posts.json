@@ -122,6 +122,16 @@
     "resumen": "Leyenda urbana",
     "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/15el_silbon_img.jpeg",
     "archivo": "posts/15el_silbon.html"
+},
+
+  
+{
+    "id": 16,
+    "titulo": "El nido sin huevo",
+    "fecha": "2026-08-26",
+    "resumen": "Análisis filosófico",
+    "imagen": "X",
+    "archivo": "posts/X"
 }
 ]
 
