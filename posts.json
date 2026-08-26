@@ -112,6 +112,16 @@
     "resumen": "Hipótesis",
     "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/14_la_era_de_infierno_img.png",
     "archivo": "posts/14_la_era_de_infierno.html"
+},
+
+  
+{
+    "id": 15,
+    "titulo": "El Silbon",
+    "fecha": "2026-08-26",
+    "resumen": "Leyenda urbana",
+    "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/15el_silbon_img.jpeg",
+    "archivo": "posts/15el_silbon.html"
 }
 ]
 
