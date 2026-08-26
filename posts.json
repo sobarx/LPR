@@ -130,8 +130,8 @@
     "titulo": "El nido sin huevo",
     "fecha": "2026-08-26",
     "resumen": "Análisis filosófico",
-    "imagen": "X",
-    "archivo": "posts/X"
+    "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/16chip_biologico2img.jpg",
+    "archivo": "posts/El nido sin huevo.html"
 }
 ]
 
