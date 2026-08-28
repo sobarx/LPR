@@ -132,6 +132,16 @@
     "resumen": "Análisis filosófico",
     "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/16chip_biologico2img.jpg",
     "archivo": "posts/El nido sin huevo.html"
+},
+
+  
+{
+    "id": 17,
+    "titulo": "La Victoria del Rey Pirro De Rusia",
+    "fecha": "2026-08-28",
+    "resumen": "Consecuencias para Rusia por la invasión a Ucrania",
+    "imagen": "X",
+    "archivo": "posts/17la_victoria_del_rey_pirro_de_rusia.html"
 }
 ]
 
