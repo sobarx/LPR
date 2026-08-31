@@ -160,7 +160,7 @@
     "titulo": "Centaurro",
     "fecha": "2026-08-31",
     "resumen": "Análisis de matriz de opinión",
-    "imagen": "X",
+    "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/20_centaurro_img.jpg",
     "archivo": "posts/20_centaurro.html"
 }
 ]
