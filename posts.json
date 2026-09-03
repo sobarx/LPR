@@ -162,15 +162,16 @@
     "resumen": "Análisis de matriz de opinión",
     "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/20_centaurro_img.jpg",
     "archivo": "posts/20_centaurro.html"
-}
-],
+},
 
-
+  
 {
-    "id": 2026-09-04,
-    "titulo": "X",
-    "fecha": "X",
-    "resumen": "X",
-    "imagen": "X",
-    "archivo": "posts/X"
+    "id": 21,
+    "titulo": "Los Gamer",
+    "fecha": "2026-09-04",
+    "resumen": "Revista informativa",
+    "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/21los_gamer_img.jpg",
+    "archivo": "posts/21los_gamer.html"
 }
+
+]
