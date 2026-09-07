@@ -172,6 +172,16 @@
     "resumen": "Revista informativa",
     "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/21los_gamer_img.jpg",
     "archivo": "posts/21los_gamer.html"
+},
+
+  
+{
+    "id": 22,
+    "titulo": "Sopa Sana",
+    "fecha": "2026-09-07",
+    "resumen": "Alimentando cuerpo, mente y espíritu",
+    "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/22_sopa_sana_img.jpg",
+    "archivo": "posts/22_sopa_sana.html"
 }
 
 ]
