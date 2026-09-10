@@ -192,6 +192,16 @@
     "resumen": "Cuando la solución se convierte en el problema",
     "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/MrJhon.jpg",
     "archivo": "posts/mr_jhon.html"
-  }
+  },
+
+  
+{
+    "id": 23,
+    "titulo": "Salmo 151",
+    "fecha": "2026-09-10",
+    "resumen": "Teología Salmo 151",
+    "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/salmo_151_img.jpg",
+    "archivo": "posts/salmo_151.html"
+}
 
 ]
