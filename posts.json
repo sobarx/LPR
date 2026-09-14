@@ -203,15 +203,13 @@
     "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/salmo_151_img.jpg",
     "archivo": "posts/salmo_151.html"
 },
-
-  
 {
     "id": 25,
-    "titulo": "Proyecto Bebegotshi",
+    "titulo": "Bebegotshi",
     "fecha": "2026-09-14",
     "resumen": "Bloc interactivo",
     "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/bebegotshi.jpg",
-    "archivo": "posts/25_proyecto_bebegotshi.html"
-}
+    "archivo": "posts/bebegotshi.html"
+  }
 
 ]
