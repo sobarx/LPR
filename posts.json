@@ -212,6 +212,16 @@
     "resumen": "Bloc interactivo",
     "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/bebegotshi.jpg",
     "archivo": "posts/bebegotshi.html"
-  }
+  },
+
+  
+{
+    "id": 26,
+    "titulo": "Bebegotshi APK",
+    "fecha": "2026-09-15",
+    "resumen": "APK bebé inteligente",
+    "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/gotshi2.jpg",
+    "archivo": "posts/apk_bebegotshi.html"
+}
 
 ]
