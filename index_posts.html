@@ -147,9 +147,15 @@ summary:hover {
 
 <div id="contenedor-publicaciones"></div>
 
- <ul>
-<li><a href="https://sobarx.github.io/LPR/"> Ir a la Página Principal</a></li>
+<nav>
+<ul>
+<li style="margin-bottom: 15px;"><a href="https://sobarx.github.io/LPR/index_posts.html">Github Blog Sobarx</a></li>
+<li style="margin-bottom: 15px;"><a href="https://sobarx.blogspot.com">Blogger Blog Sobarx</a></li>
+<li style="margin-bottom: 15px;"><a href="https://organizations.minnit.chat/410482503692254/Main">Tu opinión aquí</a></li>
+<li style="margin-bottom: 15px;"><a href="https://sobarx.github.io/LPR/">Página principal</a></li>
+<li style="margin-bottom: 15px;"><a href="https://web.telegram.org/a/">Telegram Sobarx</a></li>
 </ul>
+</nav>
 
 <div>
 <p style="font-size: 16px; color: gray; text-decoration: underline;">Soportado por Github</p>
@@ -205,7 +211,6 @@ fetch('./posts.json')
       htmlContenido += `</ul></div>`;
     }
 
-    // 3. El resto de posts (del índice 11 en adelante) dentro del acordeón
     const restoPosts = postsOrdenados.slice(11);
     if (restoPosts.length > 0) {
       htmlContenido += `
@@ -236,17 +241,7 @@ fetch('./posts.json')
     document.getElementById('contenedor-publicaciones').innerHTML = 
       `<div class="mensaje-error"><strong>Atención:</strong> ${error.message}</div>`;
   });
-</script>
-
- <nav>
-<ul>
-<li style="margin-bottom: 15px;"><a href="https://sobarx.github.io/LPR/index_posts.html">Github Blog Sobarx</a></li>
-<li style="margin-bottom: 15px;"><a href="https://sobarx.blogspot.com">Blogger Blog Sobarx</a></li>
-<li style="margin-bottom: 15px;"><a href="https://organizations.minnit.chat/410482503692254/Main">Tu opinión aquí</a></li>
-<li style="margin-bottom: 15px;"><a href="https://sobarx.github.io/LPR/">Página principal</a></li>
-<li style="margin-bottom: 15px;"><a href="https://web.telegram.org/a/">Telegram Sobarx</a></li>
-</ul>
- </nav>
+</script> 
 
 </body>
 </html>
