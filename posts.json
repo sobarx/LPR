@@ -222,6 +222,16 @@
     "resumen": "APK bebé inteligente",
     "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/gotshi2.jpg",
     "archivo": "posts/apk_bebegotshi.html"
+},
+
+  
+{
+    "id": 27,
+    "titulo": "Efecto Mariposa",
+    "fecha": "2026-09-18",
+    "resumen": "Acción y reacción",
+    "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/25efecto_mariposa_img.jpg",
+    "archivo": "posts/25efecto_mariposa.html"
 }
 
 ]
