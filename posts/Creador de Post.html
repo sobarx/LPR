@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Post</title>
+
+<style>
+html { scroll-behavior: smooth; }
+body {   
+  margin: 20px;       
+  background-color: #f5eada;        
+  color: #56561F;         
+  letter-spacing: 0.03em;     
+}
+
+
+.contenido, .bloque-editor {  
+  background-color: #f5eada;  
+  max-width: 800px;  
+  padding: 15px;  
+  border-radius: 15px;  
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.2);  
+  margin: 0 auto 15px auto;  
+  width: 92%;  
+  overflow-wrap: break-word;  
+  border-top: 6px solid #797921;  
+}
+ 
+
+.seccion-cabecera {         
+  display: flex;         
+  flex-direction: column;         
+  align-items: center;         
+  padding: 20px;         
+  background-color: #f5eada;         
+  margin: 0 auto 15px auto; 
+  max-width: 800px;
+  width: 92%;
+  border-radius: 15px;         
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.2);         
+  text-align: center;         
+  border-top: 6px solid #797921;     
+}
+
+.seccion-cabecera img {         
+  max-width: 85%;          
+  max-height: 400px;         
+  height: auto;          
+  display: block;         
+  margin: 5px auto 0 auto; 
+  border-radius: 6px;         
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);     
+  object-fit: contain;  
+}
+        
+h1 {            
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;      
+  font-size: 2.1em;     
+  margin-top: 5px;      
+  margin-bottom: 5px; 
+  color: #797921;    
+  letter-spacing: 0.03em;      
+  line-height: 1.1;       
+  word-wrap: break-word;      
+}
+
+.d1 {
+   text-indent: 2em;          
+  text-align: justify;        
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;        
+  font-size: 1.0em;         
+  margin-top: 5px;         
+  color: #56561F;         
+  letter-spacing: 0.03em;    
+  line-height: 1.5;        
+  word-wrap: break-word;   
+}
+
+.firma {  
+  text-align: right;    
+  font-size: 0.9em;    
+  font-style: italic;   
+  color: #56561F;    
+  margin-top: 15px;  
+}
+
+label { display: block; margin-top: 5px; font-weight: 600; }
+
+input, textarea {    
+  width: 100%;    
+  padding: 8px 10px;    
+  margin-top: 5px;   
+  margin-bottom: 12px;   
+  font-size: 1em;    
+  font-family: inherit;    
+  border: 1px solid #ccc;    
+  border-radius: 6px;  
+}
+
+textarea { resize: vertical; min-height: 200px; line-height: 1.5; }
+
+button {    
+  margin: 4px 8px 4px 0;    
+  padding: 10px 20px;    
+  font-size: 1em;   
+  cursor: pointer;    
+  border: none;    
+  border-radius: 6px;    
+  background: var(--acento);    
+  color: #fff;    
+  transition: background 0.15s ease;   
+}
+
+button:hover { background: #8A6F52; }
+button:focus-visible, input:focus-visible, textarea:focus-visible {    
+  outline: 3px solid #797921;    
+  outline-offset: 2px;  
+}
+
+.secundario { background: #56561F; }
+.secundario:hover { background: #8A6F52; }
+.oculto { display: none; }
+.aviso {    color: #a33;    font-size: 0.95em;    margin-top: 5px;   margin-bottom: 10px;  }
+  
+:root {    --crema: #f5eada;   --acento: #797921;    --texto: #fff;   }
+* { box-sizing: border-box; }
+@media (prefers-reduced-motion: reduce) {    button { transition: none; }  }
+</style>
+</head>
+<body>
+
+
+<div id="editor">
+  <div class="bloque-editor">
+    <h1><label for="input-titulo">Título</label></h1>
+    <input id="input-titulo" type="text" placeholder="Escribe el título aquí">
+  </div>
+
+  <div class="bloque-editor">
+    <label for="input-portada">Portada (URL de imagen)</label>
+    <input id="input-portada" type="text" placeholder="URL DE LA IMAGEN">
+  </div>
+
+  <div class="bloque-editor">
+    <label for="input-desarrollo">Desarrollo</label>
+    <textarea id="input-desarrollo" placeholder="Escribe el contenido..."></textarea>
+  </div>   
+
+  <div class="bloque-editor">
+    <label for="input-autoria">Autoría</label>
+    <input id="input-autoria" type="text" placeholder="Nombre del autor">
+  </div>   
+
+  <div id="mensaje-error" class="aviso oculto">Indispensable el título.</div>
+
+  <div style="max-width: 800px; margin: 10px auto; width: 92%;">
+    <button onclick="insertarCrear()">Crear tarjeta</button>
+    <button class="secundario" onclick="borrarTodo()">Borrar todo</button>
+  </div>
+</div>
+
+
+<div id="controles-vista" class="oculto" style="max-width: 800px; margin: 10px auto; width: 92%;">
+  <button onclick="regresarAEditar()">Modificar / Regresar</button>
+  <button onclick="descargarHTML()">Descargar archivo HTML</button>
+  <button class="secundario" onclick="borrarTodo()">Borrar</button>
+</div>
+
+<div id="resultado-tarjeta"></div>
+
+
+<div class="contenido">
+<a href="https://sobarx.github.io/LPR/index_posts.html"> Página de Sobarx</a>
+</div>
+<script>
+  function escapeHTML(texto) {
+    const div = document.createElement('div');
+    div.textContent = texto;
+    return div.innerHTML;
+  }
+
+  function construirTarjetaHTML(datos) {
+    
+    const imagenHTML = datos.portada
+      ? `<img src="${escapeHTML(datos.portada)}" alt="Portada" onerror="this.remove()">`
+      : '';
+
+    
+    return `
+      <div class="seccion-cabecera">
+        <h1>${escapeHTML(datos.titulo)}</h1>
+        ${imagenHTML}
+      </div>
+      <div class="contenido">
+      <div class= "d1"> ${escapeHTML(datos.desarrollo)}</div>
+        <div class="firma">${escapeHTML(datos.autoria)}</div>
+      </div>
+    `;
+  }
+
+  function leerFormulario() {
+    return {
+      titulo: document.getElementById('input-titulo').value.trim(),
+      portada: document.getElementById('input-portada').value.trim(),
+      desarrollo: document.getElementById('input-desarrollo').value.trim(),
+      autoria: document.getElementById('input-autoria').value.trim()
+    };
+  }
+
+  async function insertarCrear() {
+    const datos = leerFormulario();
+    const mensajeError = document.getElementById('mensaje-error');
+
+    if (!datos.titulo) {
+      mensajeError.classList.remove('oculto');
+      return;
+    }
+    mensajeError.classList.add('oculto');
+
+    const tarjetaHTML = construirTarjetaHTML(datos);
+    document.getElementById('resultado-tarjeta').innerHTML = tarjetaHTML;
+
+    document.getElementById('editor').classList.add('oculto');
+    document.getElementById('controles-vista').classList.remove('oculto');
+
+    try {
+      if (window.storage && typeof window.storage.set === 'function') {
+        await window.storage.set('tarjeta-guardada', JSON.stringify(datos), false);
+      }
+    } catch (err) {
+      console.error('Negativo guardar tarjeta:', err);
+    }
+  }
+
+  function regresarAEditar() {
+    document.getElementById('editor').classList.remove('oculto');
+    document.getElementById('controles-vista').classList.add('oculto');
+    document.getElementById('resultado-tarjeta').innerHTML = '';
+  }
+
+  async function borrarTodo() {
+    document.getElementById('resultado-tarjeta').innerHTML = '';
+    document.getElementById('editor').classList.remove('oculto');
+    document.getElementById('controles-vista').classList.add('oculto');
+    document.getElementById('mensaje-error').classList.add('oculto');
+
+    document.getElementById('input-titulo').value = '';
+    document.getElementById('input-portada').value = '';
+    document.getElementById('input-desarrollo').value = '';
+    document.getElementById('input-autoria').value = '';
+
+    try {
+      if (window.storage && typeof window.storage.delete === 'function') {
+        await window.storage.delete('tarjeta-guardada', false);
+      }
+    } catch (err) {
+      
+    }
+  }
+
+  function descargarHTML() {
+    const contenidoTarjeta = document.getElementById('resultado-tarjeta').innerHTML;
+    const estiloActual = document.querySelector('style').innerHTML;
+    const tituloArchivo = document.getElementById('input-titulo').value.trim() || 'Blog_Post';
+
+    const documentoCompleto = `<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${tituloArchivo}</title>
+  <style>${estiloActual}</style>
+</head>
+<body>
+  <div style="margin-top: 20px;">
+    ${contenidoTarjeta}
+  </div>
+</body>
+</html>`;
+
+    const blob = new Blob([documentoCompleto], { type: 'text/html' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = `${tituloArchivo.replace(/\s+/g, '_')}.html`;
+    link.click();
+    URL.revokeObjectURL(link.href);
+  }
+</script>
+</body>
+</html>
