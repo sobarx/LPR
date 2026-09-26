@@ -232,6 +232,17 @@
     "resumen": "Acción y reacción",
     "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/25efecto_mariposa_img.jpg",
     "archivo": "posts/25efecto_mariposa.html"
+},
+
+
+  
+{
+    "id": 28,
+    "titulo": "Psicópata Neuroalgoritmica",
+    "fecha": "2026-09-26",
+    "resumen": "Herramienta para crear un  post",
+    "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/6_27psic%C3%B3pata_neuro_algoritmica_img.jpg",
+    "archivo": "posts/27psicópata_neuro_algoritmica.html"
 }
 
 ]
