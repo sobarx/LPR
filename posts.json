@@ -254,6 +254,17 @@
     "resumen": "El revés corporativo",
     "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/28_oscuridad_%20detr%C3%A1s_de_la_sombra_img.jpg",
     "archivo": "posts/28_oscuridad_ detrás_de_la_sombra.html"
+},
+
+
+  
+{
+    "id": 30,
+    "titulo": "Vuela Libertad",
+    "fecha": "2026-10-04",
+    "resumen": "Naturaleza bella y sabia",
+    "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/Vuela_Libertad2_img.jpg",
+    "archivo": "posts/vuela_libertad.html"
 }
 
 ]
