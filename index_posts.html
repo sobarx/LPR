@@ -176,6 +176,16 @@ overflow-wrap: break-word;
     align-items: center;
 }
 
+ 
+.miniatura-lista {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+ 
+
 .lista-titulos a {
     color: #797921;
     text-decoration: none;
@@ -287,6 +297,7 @@ alt="" style=" cursor: pointer;">
 
 
 
+
 <script>
 fetch('./posts.json')
   .then(response => {
@@ -303,32 +314,36 @@ fetch('./posts.json')
       return;
     }
 
-   
     const postsOrdenados = posts.slice().reverse();
 
-
+    // 1. Post más reciente (Mantiene la imagen grande principal intacta)
     const reciente = postsOrdenados[0];
-    const miniaturaHtml = reciente.imagen 
+    const imagenGrandePrincipal = reciente.imagen 
       ? `<img src="${reciente.imagen}" alt="${reciente.titulo}" class="img-miniatura">` 
       : '';
 
     let htmlContenido = `
       <div class="seccion-bloque tarjeta-post">
         <h2>${reciente.titulo}</h2>
-        <span class="fecha"> ${reciente.fecha}</span>
-        ${miniaturaHtml}
+        <span class="fecha">📌 ${reciente.fecha}</span>
+        ${imagenGrandePrincipal}
         <p>${reciente.resumen}</p>
-        <a class="btn-leer" href="${reciente.archivo}">Leer publicación completa </a>
+        <a class="btn-leer" href="${reciente.archivo}">Leer publicación completa ➔</a>
       </div>
     `;
 
-
+    // 2. Siguientes 10 publicaciones (AQUÍ sí se incluyen las miniaturas pequeñas)
     const siguientesDiez = postsOrdenados.slice(1, 11);
     if (siguientesDiez.length > 0) {
       htmlContenido += `<div class="seccion-bloque"><ul class="lista-titulos">`;
       siguientesDiez.forEach(post => {
+        const miniatura = post.imagen 
+          ? `<img src="${post.imagen}" alt="" class="miniatura-lista">` 
+          : '';
+
         htmlContenido += `
           <li>
+            ${miniatura}
             <a href="${post.archivo}">${post.titulo}</a>
             <span class="fecha">${post.fecha}</span>
           </li>
@@ -337,17 +352,23 @@ fetch('./posts.json')
       htmlContenido += `</ul></div>`;
     }
 
+    // 3. Resto de publicaciones desplegables (AQUÍ también incluyen las miniaturas)
     const restoPosts = postsOrdenados.slice(11);
     if (restoPosts.length > 0) {
       htmlContenido += `
         <div class="seccion-bloque">
           <details>
-            <summary> Ver publicaciones anteriores (${restoPosts.length})</summary>
+            <summary>► Ver publicaciones anteriores (${restoPosts.length})</summary>
             <ul class="lista-titulos">
       `;
       restoPosts.forEach(post => {
+        const miniatura = post.imagen 
+          ? `<img src="${post.imagen}" alt="" class="miniatura-lista">` 
+          : '';
+
         htmlContenido += `
           <li>
+            ${miniatura}
             <a href="${post.archivo}">${post.titulo}</a>
             <span class="fecha">${post.fecha}</span>
           </li>
@@ -367,7 +388,13 @@ fetch('./posts.json')
     document.getElementById('contenedor-publicaciones').innerHTML = 
       `<div class="mensaje-error"><strong>Atención:</strong> ${error.message}</div>`;
   });
-</script> 
+</script>
+
+
+
+
+
+ 
 
  <script>
     function actualizarFecha() {
