@@ -178,8 +178,8 @@ overflow-wrap: break-word;
 
  
 .miniatura-lista {
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
   object-fit: cover;
   border-radius: 3px;
   flex-shrink: 0;
@@ -325,7 +325,7 @@ fetch('./posts.json')
     let htmlContenido = `
       <div class="seccion-bloque tarjeta-post">
         <h2>${reciente.titulo}</h2>
-        <span class="fecha">📌 ${reciente.fecha}</span>
+        <span class="fecha"> ${reciente.fecha}</span>
         ${imagenGrandePrincipal}
         <p>${reciente.resumen}</p>
         <a class="btn-leer" href="${reciente.archivo}">Leer publicación completa ➔</a>
