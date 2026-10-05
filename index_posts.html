@@ -265,13 +265,12 @@ summary:hover {
 
 <nav>
 <ul>
-<p>Contactos</p>
-<li style="margin-bottom: 15px;"><a href="https://sobarx.github.io/LPR/index_posts.html">Github Blog Sobarx</a></li>
-<li style="margin-bottom: 15px;"><a href="https://sobarx.blogspot.com">Blogger Blog Sobarx</a></li>
-<li style="margin-bottom: 15px;"><a href="https://organizations.minnit.chat/410482503692254/Main">Tu opinión aquí</a></li>
-<li style="margin-bottom: 15px;"><a href="https://sobarx.github.io/LPR/">Página principal</a></li>
-<li style="margin-bottom: 15px;"><a href="https://web.telegram.org/a/">Telegram Sobarx</a></li>
-<p>Descargas</p>
+<p>CONTACTOS</p>
+ <li style="margin-bottom: 15px;"><a href="https://sobarx.github.io/LPR/">PÁGINA PRINCIPAL</a></li>
+<li style="margin-bottom: 15px;"><a href="https://sobarx.github.io/LPR/index_posts.html">GITHUB BLOG SOBARX</a></li>
+<li style="margin-bottom: 15px;"><a href="https://sobarx.blogspot.com">BLOGGER BLOG SOBARX</a></li>
+<li style="margin-bottom: 15px;"><a href="https://web.telegram.org/a/">TELEGRAM SOBARX</a></li>
+<p>DESCARGAS</p>
 <li style="margin-bottom: 15px;"><a href="https://drive.google.com/file/d/1GaQLtyqfhHylEv9v1Zn2DrlFzYalo77R/view?usp=drivesdk">La Palabra Revelada APK</a></li>
 <li style="margin-bottom: 15px;"><a href="https://drive.google.com/file/d/14ly-o47eqhmvqwfOdvOA3RyqpkuVsScS/view?usp=drivesdk">La Palabra Revelada HTML</a></li>
 <li style="margin-bottom: 15px;"><a href="https://drive.google.com/file/d/1dB71nk5Kzyi8JVx1rBLw-zGvf84jdLWi/view?usp=drivesdk">Bebegotshi APK</a></li>
@@ -281,7 +280,7 @@ summary:hover {
 </nav>
 
 <div>
-<p style="text-indent: 2em; font-size: 16px; color: gray; text-decoration: underline;">Soportado por Github</p>
+<p style="text-indent: 2em; font-size: 16px; color: gray; text-decoration: underline;">SOPORTADO POR GITHUB</p>
 </div>
 
 
@@ -316,7 +315,7 @@ fetch('./posts.json')
 
     const postsOrdenados = posts.slice().reverse();
 
-    // 1. Post más reciente (Mantiene la imagen grande principal intacta)
+
     const reciente = postsOrdenados[0];
     const imagenGrandePrincipal = reciente.imagen 
       ? `<img src="${reciente.imagen}" alt="${reciente.titulo}" class="img-miniatura">` 
@@ -332,7 +331,7 @@ fetch('./posts.json')
       </div>
     `;
 
-    // 2. Siguientes 10 publicaciones (AQUÍ sí se incluyen las miniaturas pequeñas)
+    
     const siguientesDiez = postsOrdenados.slice(1, 11);
     if (siguientesDiez.length > 0) {
       htmlContenido += `<div class="seccion-bloque"><ul class="lista-titulos">`;
@@ -352,7 +351,7 @@ fetch('./posts.json')
       htmlContenido += `</ul></div>`;
     }
 
-    // 3. Resto de publicaciones desplegables (AQUÍ también incluyen las miniaturas)
+
     const restoPosts = postsOrdenados.slice(11);
     if (restoPosts.length > 0) {
       htmlContenido += `
