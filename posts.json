@@ -265,7 +265,20 @@
     "resumen": "Naturaleza bella y sabia",
     "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/Vuela_Libertad2_img.jpg",
     "archivo": "posts/vuela_libertad.html"
+},
+
+
+  
+{
+    "id": 31,
+    "titulo": "Notícias sábado 10 de Octubre Sobarx",
+    "fecha": "2026-10-10",
+    "resumen": "Sinopsis",
+    "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/1noticias_sabado_10_de_octubre_sobarx_img.jpg",
+    "archivo": "posts/noticias_sabado_10_de_octubre_sobarx.html"
 }
+
+  
 
 ]
 
