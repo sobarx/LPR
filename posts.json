@@ -276,7 +276,20 @@
     "resumen": "Sinopsis",
     "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/1noticias_sabado_10_de_octubre_sobarx_img.jpg",
     "archivo": "posts/noticias_sabado_10_de_octubre_sobarx.html"
+},
+
+
+  
+{
+    "id": 32,
+    "titulo": "Disrupción",
+    "fecha": "2026-10-11",
+    "resumen": "Ruptura del orden mundial",
+    "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/disrupci%C3%B3n_img.jpg",
+    "archivo": "posts/disrupción.html"
 }
+
+  
 
   
 
