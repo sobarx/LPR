@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/sitemapl.xml
