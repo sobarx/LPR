@@ -298,8 +298,18 @@
     "resumen": "Primera Revelación",
     "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/genesis_sobarx_img.jpg",
     "archivo": "posts/genesis_sobarx.html"
-}
+},
+
+
   
+{
+    "id": 34,
+    "titulo": "Consecuencias de traicionar historicas politicas",
+    "fecha": "2026-10-12",
+    "resumen": "Análisis político",
+    "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/consecuencias_de_traicionar_historicas_politicas.jpg",
+    "archivo": "posts/consecuencias_de_traicionar_historicas_politicas.html"
+}
 
 ]
 
