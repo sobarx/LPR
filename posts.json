@@ -287,10 +287,18 @@
     "resumen": "Ruptura del orden mundial",
     "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/disrupci%C3%B3n_img.jpg",
     "archivo": "posts/disrupción.html"
-}
+},
+
 
   
-
+{
+    "id": 33,
+    "titulo": "Génesis",
+    "fecha": "2026-10-12",
+    "resumen": "Primera Revelación",
+    "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/genesis_sobarx_img.jpg",
+    "archivo": "posts/genesis_sobarx.html"
+}
   
 
 ]
