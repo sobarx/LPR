@@ -318,8 +318,7 @@
     "titulo": "Contra Seguridad Móvil",
     "fecha": "2026-10-20",
     "resumen": "Nuevas actualizaciones de  seguridad móvil",
-    "imagen": "contraseguridad_movil_img.jpg (642×377)
-https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/contraseguridad_movil_img.jpg",
+    "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/contraseguridad_movil_img.jpg",
     "archivo": "posts/contraseguridad_movil.html"
 }
   
