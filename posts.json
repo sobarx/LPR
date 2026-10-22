@@ -320,6 +320,17 @@
     "resumen": "Nuevas actualizaciones de  seguridad móvil",
     "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/contraseguridad_movil_img.jpg",
     "archivo": "posts/contraseguridad_movil.html"
+},
+
+
+  
+{
+    "id": 36,
+    "titulo": "La Tríada de Hierro II Parte",
+    "fecha": "2026-10-22",
+    "resumen": "Historia de amor",
+    "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/la_triada_de_hierro_II_parte_img.jpg",
+    "archivo": "posts/la_triada_de_hierro_II_parte.html"
 }
   
 ]
