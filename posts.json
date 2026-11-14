@@ -320,7 +320,28 @@
     "resumen": "Historia de amor",
     "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/la_triada_de_hierro_II_parte_img.jpg",
     "archivo": "posts/la_triada_de_hierro_II_parte.html"
+},
+
+
+
+
+{
+
+    "id": 37,
+
+    "titulo": "Exceldrez",
+
+    "fecha": "2026-11-13",
+
+    "resumen": "Deporte-ajedrez",
+
+    "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/Exceldrez_img.jpg",
+
+    "archivo": "posts/post_exceldrez.html"
+
 }
+
+
   
 ]
 
