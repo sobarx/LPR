@@ -339,8 +339,25 @@
 
     "archivo": "posts/post_exceldrez.html"
 
-}
+},
 
+
+
+{
+
+    "id": 38,
+
+    "titulo": "Exceldrez",
+
+    "fecha": "2026-11-13",
+
+    "resumen": "Ajedrez Deporte",
+
+    "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/ExceldrezAppHtml.jpg",
+
+    "archivo": "posts/Exceldrez.html"
+
+}
 
   
 ]
