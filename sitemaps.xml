@@ -3,7 +3,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sobarx.github.io/LPR/index_posts.html</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>,
+
+{
+    "id": 39,
+    "titulo": "Disparidad",
+    "fecha": "2026-11-19",
+    "resumen": "Consecuencias del ritmo de una vida acelerada",
+    "imagen": "URL_Imagen",
+    "archivo": "posts/disparidad.html"
+}
+</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
