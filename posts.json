@@ -357,8 +357,25 @@
 
     "archivo": "posts/Exceldrez.html"
 
-}
+},
 
+
+
+{
+
+    "id": 39,
+
+    "titulo": "Disparidad",
+
+    "fecha": "2026-11-19",
+
+    "resumen": "Consecuencias del ritmo de una vida acelerada",
+
+    "imagen": "URL_Imagen",
+
+    "archivo": "posts/disparidad.html"
+
+}
   
 ]
 
