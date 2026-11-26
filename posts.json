@@ -375,7 +375,27 @@
 
     "archivo": "posts/disparidad.html"
 
+},
+
+
+
+{
+
+    "id": 40,
+
+    "titulo": "Politica Norteamericana",
+
+    "fecha": "2026-11-26",
+
+    "resumen": "análisis de la política norteamericana",
+
+    "imagen": "https://raw.githubusercontent.com/sobarx/LPR/refs/heads/main/imagenes/sin_esequibo_lmg.jpg",
+
+    "archivo": "posts/politica_norteamericana.html"
+
 }
+
+
   
 ]
 
